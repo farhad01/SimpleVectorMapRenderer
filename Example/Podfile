@@ -2,10 +2,11 @@ use_frameworks!
 
 target 'SmappSDK_Example' do
   pod 'SmappSDK', :path => '../'
+  pod 'SwiftProtobuf', :git => 'https://github.com/apple/swift-protobuf.git' , :branch => 'master'
 
   target 'SmappSDK_Tests' do
     inherit! :search_paths
-
+    
     pod 'FBSnapshotTestCase' , '~> 2.1.4'
   end
 end

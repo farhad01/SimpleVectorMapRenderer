@@ -1,0 +1,6 @@
+framework module SmappSDK {
+  umbrella header "SmappSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

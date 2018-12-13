@@ -1,0 +1,39 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - SmappSDK (0.1.0):
+    - SwiftProtobuf
+  - SwiftProtobuf (1.2.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase (~> 2.1.4)
+  - SmappSDK (from `../`)
+  - SwiftProtobuf (from `https://github.com/apple/swift-protobuf.git`, branch `master`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  SmappSDK:
+    :path: "../"
+  SwiftProtobuf:
+    :branch: master
+    :git: https://github.com/apple/swift-protobuf.git
+
+CHECKOUT OPTIONS:
+  SwiftProtobuf:
+    :commit: b4384728cf7780cc3f6ec88bcad99ac79c6e0caa
+    :git: https://github.com/apple/swift-protobuf.git
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  SmappSDK: 1e1601f7223c3e357f041857dbcbb84f628f13df
+  SwiftProtobuf: 91a9856079044ef4ec762b2344c763cd9e5a73c1
+
+PODFILE CHECKSUM: 9e446ee4f3e07a114dac762f92d23a9f092f55aa
+
+COCOAPODS: 1.6.0.beta.2
