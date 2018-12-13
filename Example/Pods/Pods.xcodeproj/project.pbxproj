@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		013A00280F8A0F852370D15CFB415F8D /* DoubleFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC37A147B1DEB1D7DE49E0DBE495EE3 /* DoubleFormatter.swift */; };
-		0169AF5A2D98E085B2BDF8CD3BF40A7C /* SmappSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 949741F80B201760F837A765E09AE9BB /* SmappSDK-dummy.m */; };
 		0241FEACBA4C63073C3FA063999516E1 /* SwiftProtobuf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC6FFEF8E87D7453816157132AF25017 /* SwiftProtobuf.framework */; };
 		033BC0EBE0E40FD2116270044A672BB0 /* JSONDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 445DA2C736EBAEDC2EA14F2B3B0EDFD4 /* JSONDecodingError.swift */; };
 		0441E82476A9178178DF00C2AEE41E9A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE6A1DB14FF0FB7A6E181542A83DE596 /* QuartzCore.framework */; };
@@ -16,11 +15,15 @@
 		0C1A0CD23B8B1AD3C36EA419B9C6E28C /* TextFormatDecodingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206F690ADF03F3E00196B7D37324E531 /* TextFormatDecodingError.swift */; };
 		0D5E847B5619856E1C22A74EC898F69C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1485AFB720F832BD4CE44BA03B93A5F4 /* Foundation.framework */; };
 		1015AEBD31125C6E9AE506BE13F005F7 /* Internal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE9E1F7A96B4A3B6C63AA014F90A9EA /* Internal.swift */; };
+		11E3C583D09F235FE56E7A2522BDC869 /* TileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2D22F031519BC93CD0548A9A0CB798 /* TileProvider.swift */; };
+		1554DB892150D0AD0531B26D7217D886 /* vector_tile.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30E57A78C8591BF29BC1D4DC01B28C /* vector_tile.pb.swift */; };
 		163DC390363C339936B3114C72FE6716 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33F8EEAAD0C4E40F7472D29432E1933 /* SwiftSupport.swift */; };
 		1716650B1A2E8E65662FC927876AB1E0 /* StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52C686F9439DD8FC100DACD93CF4843 /* StringUtils.swift */; };
 		19825FA5B4ADB1BC7AA3537736BCB2E5 /* SwiftProtobuf-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F1A5E444C64B03147C06CD18792E323 /* SwiftProtobuf-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1998DCA1760C4B34D563CD546A3D3D7A /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92027F55F36DE7DB04D16E9DF941F5C0 /* Enum.swift */; };
+		1AECFBE76C5D9CF361ED001B7D358773 /* VectorTileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA13599B8994A1655A9B1B27B24C03B3 /* VectorTileUtils.swift */; };
 		1D5EDC6E569E7D95C8502B33852657F6 /* ExtensibleMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C336FED45E856C98F7A8811B157CC39 /* ExtensibleMessage.swift */; };
+		1F4B6FA88D660D0523AB1C7CA7CD76E0 /* SmappView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436BFC88F4470A20422A2A989DC9CE4C /* SmappView.swift */; };
 		29CF20201C4279D5363C3B0FA7943066 /* UnknownStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12E7EB91C26B847446E69AEB9969F3B /* UnknownStorage.swift */; };
 		2E0497F677CFC8E196F96BCD263B9364 /* api.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6E0641E9923009FD73C6E4FE8CFC3C /* api.pb.swift */; };
 		33A3E6C61D8BDF83FE989EA0C70801E6 /* wrappers.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F9734C4032E202591FB9D5A9C237F1 /* wrappers.pb.swift */; };
@@ -37,6 +40,7 @@
 		4CF5865BAF828AB9A7C56F3A1B1C856F /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 34FABFF190C581BC6C6430CB61F9BA61 /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D600539FC2E29EA7E28A2DA8A8B328C /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = 261925D3983D3C6B1713ED73559670E6 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D6FD5D6C4E6EE0FA1CF8C8D87ECFCC5 /* ProtobufMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63855E6021940A7A3D6099B6ABF5C41 /* ProtobufMap.swift */; };
+		4FF8CD4230874063C8F1E6401EC0CEFF /* CGUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9157C3FDFBA95B2756B5B234C6DF7DF /* CGUtils.swift */; };
 		530DD48C2566F81A548E6FCFB2BACCC2 /* ExtensionMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6E8FB531FD417835477E7F771FAC6D /* ExtensionMap.swift */; };
 		578060B7C52B49A4EF458CEBECACFEA0 /* TextFormatEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37745DFA64BEAF33B599A512C2A90617 /* TextFormatEncoder.swift */; };
 		59FD5FAEFCF13CD39358A6F36C50BED8 /* FBSnapshotTestController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F4D29863C00342EEB77F26B5C8C9C31 /* FBSnapshotTestController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -47,12 +51,14 @@
 		6443AE55D5CD3E953F26DA16A1832133 /* JSONMapEncodingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B805F217B05EA5A66A4A022042EB116 /* JSONMapEncodingVisitor.swift */; };
 		65833FC81C83B91D6C952BA780DC22A5 /* ZigZag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4514CBDB7CFC306B77AB353266477F78 /* ZigZag.swift */; };
 		664DE855A4B1A8CF1023CA33F94A58E9 /* MessageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B6ACB2830D69D16245A3346873AE22 /* MessageExtension.swift */; };
+		6670AC10A2913D3A495A6B1C9571F820 /* SmappScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318EF402C92CD883EA70621B9E74182 /* SmappScrollView.swift */; };
 		67F086FDD00FDC504B817A3EBBD8D192 /* Google_Protobuf_ListValue+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73C13C2383288FED916EABD39E6AEF1 /* Google_Protobuf_ListValue+Extensions.swift */; };
 		6B71ACB6D56B970D0B2AD8EE2B79D96F /* FBSnapshotTestCasePlatform.m in Sources */ = {isa = PBXBuildFile; fileRef = 1303A4E0F9BB4463EEA984FD1EDFC76F /* FBSnapshotTestCasePlatform.m */; };
 		6EBEC7E31DB971D8C75EBA7D54FC7A69 /* ProtoNameProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB1646118C1E1AE4FCAE8B6F56A124E /* ProtoNameProviding.swift */; };
 		6EC17B6986CC7F9EBDF0521AE86F371B /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 10404DA4BCB7298B9362147E8BC2DCD3 /* FBSnapshotTestCase.m */; };
 		6F7522B88D3D3FC728FE6ED6200A383F /* Message+AnyAdditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669370D7E0D595261C36A7849C887B77 /* Message+AnyAdditions.swift */; };
 		73247510D7AD93E5FDBA474B353BF919 /* UIImage+Diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 62D9B09762004E780D2A10AE0C496FAD /* UIImage+Diff.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		7591F461099D370C54CB9EA6AB7037F7 /* TileInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA3772F5C6330846A131EB1AA1C5F37 /* TileInterpreter.swift */; };
 		76B6B007535603C402ED9F8B3DB9396E /* SwiftProtobuf-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A555C10141233C650687AC39E0A72A /* SwiftProtobuf-dummy.m */; };
 		781980E0BEB754A4BD9CED13DE5CB2A2 /* Google_Protobuf_Value+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8168189F027BED7F4631B44006840BE /* Google_Protobuf_Value+Extensions.swift */; };
 		79973112FE7BCFF76839A00B85100421 /* BinaryEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70E2CF07D7EE91E705AF173A0CDDC95 /* BinaryEncoder.swift */; };
@@ -76,11 +82,9 @@
 		9F5D5727CC6890000387A88EDEBF10CC /* BinaryEncodingVisitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6118F874140CB011E9FEBD1DEDCB4A76 /* BinaryEncodingVisitor.swift */; };
 		A068D0F7BFE5F95F391E9B7D66384D0C /* JSONScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1D5AA06D544A687E404675E72E1BE5 /* JSONScanner.swift */; };
 		A1A752DBB630E43C7A7781A5D5CE6CD5 /* TextFormatDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5EB742F6205322BA8F3848383191CF /* TextFormatDecoder.swift */; };
-		A34BD1C347602A485DACBDA16EE141B6 /* SmappSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FDBDE239D3C4BE0A1CD5E4F8311B99 /* SmappSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A54E3E0673F17ED400F6219DDAD46F6D /* TileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6767BA360E079FD5665DE613B97C4D2E /* TileProvider.swift */; };
+		A34BD1C347602A485DACBDA16EE141B6 /* SmappSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C231970661CE4C343C6FDDFF2C5A958 /* SmappSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5526F0EA75FB5F6F6E2BCAA5E75E210 /* empty.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 013AFCFAB346212F237CA408B7A1C06C /* empty.pb.swift */; };
 		A8C3E6B5B2C833028E36CA1A85AC29E0 /* JSONDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AA74CF24F14DDBB4B88FE81309AFF2 /* JSONDecodingOptions.swift */; };
-		A8F41C30A4E6AFE80AC7FF1A6329A25E /* vector_tile.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BA7A25D1D83775B291957E911A2F1E /* vector_tile.pb.swift */; };
 		AB63FFED9846F51FC2F73EF04FF21A0E /* JSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE4B70AC3CFCBF18A99C29255DE9FBE /* JSONDecoder.swift */; };
 		AD0370D5FCF98FD13E399DA35439419B /* struct.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEF0298BA70773C9DB45B492DA86132 /* struct.pb.swift */; };
 		ADF0140A29D3BC8D88F86D44926FB7DB /* BinaryDecodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB6AB849A33A876784DD7B372D19D37 /* BinaryDecodingOptions.swift */; };
@@ -98,10 +102,7 @@
 		C22BC94182892BBB5258D8D0B46B74BA /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA98704FE0FA3F55CD2C0208A0FA7F5 /* Decoder.swift */; };
 		C2952BFFBD6C6AE5B7FF771529EAF380 /* Pods-SmappSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA8E5D1ADDA7FD8898F5830923F04BC /* Pods-SmappSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A7A3F336DC5020C3656DD6E42E5DF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1485AFB720F832BD4CE44BA03B93A5F4 /* Foundation.framework */; };
-		C425ED1C21C1782400B31D56 /* SmappView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425ED1A21C1771E00B31D56 /* SmappView.swift */; };
-		C425ED2121C17B8500B31D56 /* TileInterpreter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425ED2021C17B8500B31D56 /* TileInterpreter.swift */; };
-		C425ED2321C197DB00B31D56 /* VectorTileUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425ED2221C197DB00B31D56 /* VectorTileUtils.swift */; };
-		C425ED2521C2650300B31D56 /* CGUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C425ED2421C2650300B31D56 /* CGUtils.swift */; };
+		C75FC6E7782B1EACAA7B4259F52F816C /* SmappSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20039D7FC48262C20F3C9465D16D1E55 /* SmappSDK-dummy.m */; };
 		C81B2B384D8D728C113067FDB34C3F93 /* JSONEncodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B6C44F387F1FD6A3F3E673C056208 /* JSONEncodingOptions.swift */; };
 		CB318DD412B1DF8687BDDAC471D2A8DD /* WireFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392B93012C7DA807454E9364D121BC10 /* WireFormat.swift */; };
 		CCFCB6E1AA2710765D53FAA2B2AFE63B /* BinaryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FAE142DCBDBE07FACCEEA5B8C67B368 /* BinaryDecoder.swift */; };
@@ -173,24 +174,25 @@
 		04EEC810A6BD7AF322CB0650CFB81115 /* FBSnapshotTestCase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FBSnapshotTestCase.xcconfig; sourceTree = "<group>"; };
 		052135BD37DEC57DBBA54C74CE3E9088 /* field_mask.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = field_mask.pb.swift; path = Sources/SwiftProtobuf/field_mask.pb.swift; sourceTree = "<group>"; };
 		054CDC28FCF8801BD20D79A995F00A1D /* Google_Protobuf_FieldMask+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Google_Protobuf_FieldMask+Extensions.swift"; path = "Sources/SwiftProtobuf/Google_Protobuf_FieldMask+Extensions.swift"; sourceTree = "<group>"; };
-		09863522E16427FA7FDAAC7EB8A256A6 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		099532AB3C36E8BB955C2074FCCB13EF /* SimpleExtensionMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleExtensionMap.swift; path = Sources/SwiftProtobuf/SimpleExtensionMap.swift; sourceTree = "<group>"; };
 		0A1AF0D433D0D660026DC691B4B5E01F /* Pods-SmappSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmappSDK_Tests.modulemap"; sourceTree = "<group>"; };
+		0A5CDA22C842F22D7625B234A1D71927 /* SmappSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmappSDK-Info.plist"; sourceTree = "<group>"; };
 		0A6E8FB531FD417835477E7F771FAC6D /* ExtensionMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionMap.swift; path = Sources/SwiftProtobuf/ExtensionMap.swift; sourceTree = "<group>"; };
 		0DE149DCFEF8F7CAA99983F804837C28 /* ExtensionFields.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionFields.swift; path = Sources/SwiftProtobuf/ExtensionFields.swift; sourceTree = "<group>"; };
 		10404DA4BCB7298B9362147E8BC2DCD3 /* FBSnapshotTestCase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCase.m; path = FBSnapshotTestCase/FBSnapshotTestCase.m; sourceTree = "<group>"; };
+		125EE9B98E52BF947B4E8E4C27B55333 /* SmappSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmappSDK.modulemap; sourceTree = "<group>"; };
 		1303A4E0F9BB4463EEA984FD1EDFC76F /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		1485AFB720F832BD4CE44BA03B93A5F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1BA8E5D1ADDA7FD8898F5830923F04BC /* Pods-SmappSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmappSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		1C7FA1EC4A87B9FE52D33E06003C9ABC /* BinaryDelimited.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryDelimited.swift; path = Sources/SwiftProtobuf/BinaryDelimited.swift; sourceTree = "<group>"; };
+		20039D7FC48262C20F3C9465D16D1E55 /* SmappSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmappSDK-dummy.m"; sourceTree = "<group>"; };
 		206F690ADF03F3E00196B7D37324E531 /* TextFormatDecodingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFormatDecodingError.swift; path = Sources/SwiftProtobuf/TextFormatDecodingError.swift; sourceTree = "<group>"; };
 		261925D3983D3C6B1713ED73559670E6 /* FBSnapshotTestCasePlatform.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCasePlatform.h; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.h; sourceTree = "<group>"; };
-		26DD0B602C57BA45E3101E9FA8A80C5F /* SmappSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SmappSDK-Info.plist"; sourceTree = "<group>"; };
-		275C8D8CAA3CFBCA367680CD0C210FB5 /* SmappSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SmappSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		275C8D8CAA3CFBCA367680CD0C210FB5 /* SmappSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SmappSDK.framework; path = SmappSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28B0502E4B92AE8047EC245B599DB4AB /* JSONEncodingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncodingError.swift; path = Sources/SwiftProtobuf/JSONEncodingError.swift; sourceTree = "<group>"; };
 		29AA74CF24F14DDBB4B88FE81309AFF2 /* JSONDecodingOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONDecodingOptions.swift; path = Sources/SwiftProtobuf/JSONDecodingOptions.swift; sourceTree = "<group>"; };
-		2AFB54304BC6649D3632FA86C9640EE7 /* SmappSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SmappSDK.modulemap; sourceTree = "<group>"; };
 		2B6A55E572F600217B74FA264603306B /* SelectiveVisitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SelectiveVisitor.swift; path = Sources/SwiftProtobuf/SelectiveVisitor.swift; sourceTree = "<group>"; };
+		3318EF402C92CD883EA70621B9E74182 /* SmappScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmappScrollView.swift; path = SmappSDK/Classes/SmappScrollView.swift; sourceTree = "<group>"; };
 		34FABFF190C581BC6C6430CB61F9BA61 /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
 		37745DFA64BEAF33B599A512C2A90617 /* TextFormatEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFormatEncoder.swift; path = Sources/SwiftProtobuf/TextFormatEncoder.swift; sourceTree = "<group>"; };
 		392B93012C7DA807454E9364D121BC10 /* WireFormat.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WireFormat.swift; path = Sources/SwiftProtobuf/WireFormat.swift; sourceTree = "<group>"; };
@@ -199,14 +201,17 @@
 		3B1D5AA06D544A687E404675E72E1BE5 /* JSONScanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONScanner.swift; path = Sources/SwiftProtobuf/JSONScanner.swift; sourceTree = "<group>"; };
 		3B58E0D469208F62D57439738F33811A /* UIImage+Diff.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Diff.m"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.m"; sourceTree = "<group>"; };
 		3D5A2C67C6E132849D250DBB681C5F72 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		3F97B8EC8FEDDCDA880E12C66B37E2FA /* Pods_SmappSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmappSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DB2D5238CF8BCD57A1758176AD9574E /* SmappSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = SmappSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		3F97B8EC8FEDDCDA880E12C66B37E2FA /* Pods_SmappSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SmappSDK_Tests.framework; path = "Pods-SmappSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4339EB57E6BF29E5938B1AD136361F10 /* Message+JSONArrayAdditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Message+JSONArrayAdditions.swift"; path = "Sources/SwiftProtobuf/Message+JSONArrayAdditions.swift"; sourceTree = "<group>"; };
+		436BFC88F4470A20422A2A989DC9CE4C /* SmappView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SmappView.swift; path = SmappSDK/Classes/SmappView.swift; sourceTree = "<group>"; };
 		445DA2C736EBAEDC2EA14F2B3B0EDFD4 /* JSONDecodingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONDecodingError.swift; path = Sources/SwiftProtobuf/JSONDecodingError.swift; sourceTree = "<group>"; };
 		44D73D754DF607A7BDCBEA955F3E95FC /* TextFormatEncodingVisitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFormatEncodingVisitor.swift; path = Sources/SwiftProtobuf/TextFormatEncodingVisitor.swift; sourceTree = "<group>"; };
 		44E9509A51EF8CD08A47B2A8303795C4 /* Pods-SmappSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmappSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		4514CBDB7CFC306B77AB353266477F78 /* ZigZag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZigZag.swift; path = Sources/SwiftProtobuf/ZigZag.swift; sourceTree = "<group>"; };
 		459E18CFA530754D3D461C30C9AA8762 /* Google_Protobuf_Any+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Google_Protobuf_Any+Extensions.swift"; path = "Sources/SwiftProtobuf/Google_Protobuf_Any+Extensions.swift"; sourceTree = "<group>"; };
 		47B8EAEEEC75A4AD917EB22348F81CFE /* Google_Protobuf_Wrappers+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Google_Protobuf_Wrappers+Extensions.swift"; path = "Sources/SwiftProtobuf/Google_Protobuf_Wrappers+Extensions.swift"; sourceTree = "<group>"; };
+		47DF1AF2CF99997EB209FD0692B628D4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		48CF88C961344B70A6D58282CEE68C4C /* TimeUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TimeUtils.swift; path = Sources/SwiftProtobuf/TimeUtils.swift; sourceTree = "<group>"; };
 		49C5805A836B91CC6D510C41C2D0A293 /* Pods-SmappSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SmappSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		4AD9E70DDDA43AA5380ECD40F0457011 /* SwiftProtobuf-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftProtobuf-prefix.pch"; sourceTree = "<group>"; };
@@ -219,17 +224,17 @@
 		51E83097FC356E72D46A8FC65712C8BF /* TextFormatScanner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFormatScanner.swift; path = Sources/SwiftProtobuf/TextFormatScanner.swift; sourceTree = "<group>"; };
 		59F39F7B9EBC879B4EFFC5B8242E0D48 /* Pods-SmappSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SmappSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		5B2B6C44F387F1FD6A3F3E673C056208 /* JSONEncodingOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncodingOptions.swift; path = Sources/SwiftProtobuf/JSONEncodingOptions.swift; sourceTree = "<group>"; };
+		5FA3772F5C6330846A131EB1AA1C5F37 /* TileInterpreter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TileInterpreter.swift; path = SmappSDK/Classes/TileInterpreter.swift; sourceTree = "<group>"; };
 		6118F874140CB011E9FEBD1DEDCB4A76 /* BinaryEncodingVisitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryEncodingVisitor.swift; path = Sources/SwiftProtobuf/BinaryEncodingVisitor.swift; sourceTree = "<group>"; };
 		6168C345EC8E0E5DA02869029EA5307B /* ExtensionFieldValueSet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtensionFieldValueSet.swift; path = Sources/SwiftProtobuf/ExtensionFieldValueSet.swift; sourceTree = "<group>"; };
 		61715AFD3432F7C32A9F71E87C25508D /* JSONEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncoder.swift; path = Sources/SwiftProtobuf/JSONEncoder.swift; sourceTree = "<group>"; };
 		62D9B09762004E780D2A10AE0C496FAD /* UIImage+Diff.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Diff.h"; path = "FBSnapshotTestCase/Categories/UIImage+Diff.h"; sourceTree = "<group>"; };
 		6498B8346B3706DD3E8885EB79560F3D /* UIImage+Compare.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Compare.m"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.m"; sourceTree = "<group>"; };
 		669370D7E0D595261C36A7849C887B77 /* Message+AnyAdditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Message+AnyAdditions.swift"; path = "Sources/SwiftProtobuf/Message+AnyAdditions.swift"; sourceTree = "<group>"; };
-		6767BA360E079FD5665DE613B97C4D2E /* TileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TileProvider.swift; path = SmappSDK/Classes/TileProvider.swift; sourceTree = "<group>"; };
 		6F1A5E444C64B03147C06CD18792E323 /* SwiftProtobuf-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftProtobuf-umbrella.h"; sourceTree = "<group>"; };
 		6F436F61766F150A3580075E4C0865CA /* Pods-SmappSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SmappSDK_Tests-dummy.m"; sourceTree = "<group>"; };
+		6F5AB8CF6ABB5B8A194A1C8D4D9B37CC /* SmappSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmappSDK-prefix.pch"; sourceTree = "<group>"; };
 		6FAE142DCBDBE07FACCEEA5B8C67B368 /* BinaryDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryDecoder.swift; path = Sources/SwiftProtobuf/BinaryDecoder.swift; sourceTree = "<group>"; };
-		71FDBDE239D3C4BE0A1CD5E4F8311B99 /* SmappSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmappSDK-umbrella.h"; sourceTree = "<group>"; };
 		74A971A6D780ECF3B2ED6CB1E49658FB /* FieldTag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldTag.swift; path = Sources/SwiftProtobuf/FieldTag.swift; sourceTree = "<group>"; };
 		78FF6271565B7DE019314DFA4EB805B7 /* Message+BinaryAdditions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Message+BinaryAdditions.swift"; path = "Sources/SwiftProtobuf/Message+BinaryAdditions.swift"; sourceTree = "<group>"; };
 		7A543F683965F5AF5A379F776E55EAF7 /* UIApplication+StrictKeyWindow.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIApplication+StrictKeyWindow.m"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.m"; sourceTree = "<group>"; };
@@ -251,9 +256,8 @@
 		92027F55F36DE7DB04D16E9DF941F5C0 /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Enum.swift; path = Sources/SwiftProtobuf/Enum.swift; sourceTree = "<group>"; };
 		93A555C10141233C650687AC39E0A72A /* SwiftProtobuf-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftProtobuf-dummy.m"; sourceTree = "<group>"; };
 		941F5D83D1BEA4D2B34773C5F1741172 /* Varint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Varint.swift; path = Sources/SwiftProtobuf/Varint.swift; sourceTree = "<group>"; };
-		949741F80B201760F837A765E09AE9BB /* SmappSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SmappSDK-dummy.m"; sourceTree = "<group>"; };
 		9933959E4B682A05C40ED31B86DC878D /* Pods-SmappSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SmappSDK_Example.modulemap"; sourceTree = "<group>"; };
-		9B44D6C49F9A79CFB204A7067A2C4C07 /* SmappSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmappSDK-prefix.pch"; sourceTree = "<group>"; };
+		9C231970661CE4C343C6FDDFF2C5A958 /* SmappSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SmappSDK-umbrella.h"; sourceTree = "<group>"; };
 		9DE9F32C25E4A5A030DDE892DCAB4C1F /* FBSnapshotTestCase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FBSnapshotTestCase.modulemap; sourceTree = "<group>"; };
 		9DF0A4AF932602DF0C9C58676DF520F3 /* Pods-SmappSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SmappSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9EED88015BA329E20BDAE5B45D25F45C /* Pods-SmappSDK_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmappSDK_Example-Info.plist"; sourceTree = "<group>"; };
@@ -262,30 +266,28 @@
 		A833110605E0F88C39DF9255D10C970E /* any.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = any.pb.swift; path = Sources/SwiftProtobuf/any.pb.swift; sourceTree = "<group>"; };
 		AB6E0641E9923009FD73C6E4FE8CFC3C /* api.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = api.pb.swift; path = Sources/SwiftProtobuf/api.pb.swift; sourceTree = "<group>"; };
 		ACCC09348ABB703B0B410492BC765566 /* UIImage+Snapshot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Snapshot.m"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.m"; sourceTree = "<group>"; };
+		AD30E57A78C8591BF29BC1D4DC01B28C /* vector_tile.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = vector_tile.pb.swift; sourceTree = "<group>"; };
 		AE6A1DB14FF0FB7A6E181542A83DE596 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		B0C2F74A7B3AA0C50F7FB9DBC71BC93E /* FBSnapshotTestCase-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FBSnapshotTestCase-Info.plist"; sourceTree = "<group>"; };
 		B33F8EEAAD0C4E40F7472D29432E1933 /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B70E2CF07D7EE91E705AF173A0CDDC95 /* BinaryEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryEncoder.swift; path = Sources/SwiftProtobuf/BinaryEncoder.swift; sourceTree = "<group>"; };
-		B735ABD7D9DB36A13F9386996C6E6E05 /* SmappSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = SmappSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B749D1653A68D824E025CDDB4E9FA5E6 /* SwiftProtobuf-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftProtobuf-Info.plist"; sourceTree = "<group>"; };
 		B7ECBB99FF226697116E55FB7EA05355 /* AnyUnpackError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyUnpackError.swift; path = Sources/SwiftProtobuf/AnyUnpackError.swift; sourceTree = "<group>"; };
 		B897F252140ABCCD6D36C33349BC2F9B /* SwiftProtobuf.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftProtobuf.modulemap; sourceTree = "<group>"; };
-		B9BA7A25D1D83775B291957E911A2F1E /* vector_tile.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = vector_tile.pb.swift; sourceTree = "<group>"; };
+		B9157C3FDFBA95B2756B5B234C6DF7DF /* CGUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGUtils.swift; path = SmappSDK/Classes/CGUtils.swift; sourceTree = "<group>"; };
 		BB7C536DDC4E9326A8F61BB98ED1528E /* BinaryDecodingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryDecodingError.swift; path = Sources/SwiftProtobuf/BinaryDecodingError.swift; sourceTree = "<group>"; };
 		BCC1538A677A0F40E4389CC89BEE99C3 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
+		BCC77EF34448E7D0DD52C4E6301469BA /* SmappSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmappSDK.xcconfig; sourceTree = "<group>"; };
 		BDEF0298BA70773C9DB45B492DA86132 /* struct.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = struct.pb.swift; path = Sources/SwiftProtobuf/struct.pb.swift; sourceTree = "<group>"; };
 		BE30A7996056EC3BD1E5524E40470ACB /* source_context.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = source_context.pb.swift; path = Sources/SwiftProtobuf/source_context.pb.swift; sourceTree = "<group>"; };
-		C425ED1A21C1771E00B31D56 /* SmappView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SmappView.swift; path = SmappSDK/Classes/SmappView.swift; sourceTree = "<group>"; };
-		C425ED2021C17B8500B31D56 /* TileInterpreter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TileInterpreter.swift; path = SmappSDK/Classes/TileInterpreter.swift; sourceTree = "<group>"; };
-		C425ED2221C197DB00B31D56 /* VectorTileUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VectorTileUtils.swift; path = SmappSDK/Classes/VectorTileUtils.swift; sourceTree = "<group>"; };
-		C425ED2421C2650300B31D56 /* CGUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CGUtils.swift; path = SmappSDK/Classes/CGUtils.swift; sourceTree = "<group>"; };
 		C439D011B139717C6A5935B0B445E347 /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		C4D7C2B32DAA677420F74F942A7F359B /* Pods-SmappSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmappSDK_Tests-Info.plist"; sourceTree = "<group>"; };
 		C6E43C6EB0DB40CE6BFD1E1891D7FD1B /* BinaryEncodingSizeVisitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryEncodingSizeVisitor.swift; path = Sources/SwiftProtobuf/BinaryEncodingSizeVisitor.swift; sourceTree = "<group>"; };
-		C6EB95A1AC6D88079F9DEC0040077CCC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C79151E571C5C0CF6EB73DD07DDC7C35 /* AnyMessageStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyMessageStorage.swift; path = Sources/SwiftProtobuf/AnyMessageStorage.swift; sourceTree = "<group>"; };
 		C91A510DC578EDBFB11851BACAD05E4D /* Pods-SmappSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmappSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		C981D36F52AF99A60F9A20DA58BC198F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CA13599B8994A1655A9B1B27B24C03B3 /* VectorTileUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VectorTileUtils.swift; path = SmappSDK/Classes/VectorTileUtils.swift; sourceTree = "<group>"; };
 		CC6FFEF8E87D7453816157132AF25017 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftProtobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6D4BF5BBD6727634D906667AE35DEC9 /* FBSnapshotTestController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestController.m; path = FBSnapshotTestCase/FBSnapshotTestController.m; sourceTree = "<group>"; };
 		D73C13C2383288FED916EABD39E6AEF1 /* Google_Protobuf_ListValue+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Google_Protobuf_ListValue+Extensions.swift"; path = "Sources/SwiftProtobuf/Google_Protobuf_ListValue+Extensions.swift"; sourceTree = "<group>"; };
@@ -293,15 +295,14 @@
 		DBD4DBFB478C0F3B5298D6D7CD7D9514 /* FieldTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldTypes.swift; path = Sources/SwiftProtobuf/FieldTypes.swift; sourceTree = "<group>"; };
 		DEB1646118C1E1AE4FCAE8B6F56A124E /* ProtoNameProviding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProtoNameProviding.swift; path = Sources/SwiftProtobuf/ProtoNameProviding.swift; sourceTree = "<group>"; };
 		DED3A18332C5E3BBF55DCF072F6EF712 /* NameMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NameMap.swift; path = Sources/SwiftProtobuf/NameMap.swift; sourceTree = "<group>"; };
-		E347845D1D7B815A4A5206C4F09BB790 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E347845D1D7B815A4A5206C4F09BB790 /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FBSnapshotTestCase.framework; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E638BF3421F7B729F08F6E59C960A0EF /* Pods-SmappSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmappSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		E86C8DE0AF95B3A174DB05CE85CEB2F3 /* Visitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Visitor.swift; path = Sources/SwiftProtobuf/Visitor.swift; sourceTree = "<group>"; };
 		E89EE8A04366FF66D52588EB0E18DE3B /* Pods-SmappSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmappSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E9B6ACB2830D69D16245A3346873AE22 /* MessageExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MessageExtension.swift; path = Sources/SwiftProtobuf/MessageExtension.swift; sourceTree = "<group>"; };
-		EAF1B8C0D92C6495AF6091916E4A58D4 /* SmappSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmappSDK.xcconfig; sourceTree = "<group>"; };
-		ED4AED6DBC97A3CE84DE50136EB13559 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftProtobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED4AED6DBC97A3CE84DE50136EB13559 /* SwiftProtobuf.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftProtobuf.framework; path = SwiftProtobuf.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDA31DB2B47018C5556256673E2D6F77 /* JSONEncodingVisitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JSONEncodingVisitor.swift; path = Sources/SwiftProtobuf/JSONEncodingVisitor.swift; sourceTree = "<group>"; };
-		F089BCB39B4740172A1AE85C6178EC24 /* Pods_SmappSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmappSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F089BCB39B4740172A1AE85C6178EC24 /* Pods_SmappSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SmappSDK_Example.framework; path = "Pods-SmappSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F12E7EB91C26B847446E69AEB9969F3B /* UnknownStorage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnknownStorage.swift; path = Sources/SwiftProtobuf/UnknownStorage.swift; sourceTree = "<group>"; };
 		F4B161BBD89FFB7D0A9E5F37493C5B5F /* Version.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Version.swift; path = Sources/SwiftProtobuf/Version.swift; sourceTree = "<group>"; };
 		F52C686F9439DD8FC100DACD93CF4843 /* StringUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringUtils.swift; path = Sources/SwiftProtobuf/StringUtils.swift; sourceTree = "<group>"; };
@@ -310,6 +311,7 @@
 		F73882125A5B18A46AAAD0756DCF8F36 /* ProtobufAPIVersionCheck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProtobufAPIVersionCheck.swift; path = Sources/SwiftProtobuf/ProtobufAPIVersionCheck.swift; sourceTree = "<group>"; };
 		F80D6F50846FA029257BDBA77EEFD14B /* HashVisitor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HashVisitor.swift; path = Sources/SwiftProtobuf/HashVisitor.swift; sourceTree = "<group>"; };
 		F8168189F027BED7F4631B44006840BE /* Google_Protobuf_Value+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Google_Protobuf_Value+Extensions.swift"; path = "Sources/SwiftProtobuf/Google_Protobuf_Value+Extensions.swift"; sourceTree = "<group>"; };
+		FA2D22F031519BC93CD0548A9A0CB798 /* TileProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TileProvider.swift; path = SmappSDK/Classes/TileProvider.swift; sourceTree = "<group>"; };
 		FE55C5CBA100A1539AD62AF40F8CB685 /* Google_Protobuf_Any+Registry.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Google_Protobuf_Any+Registry.swift"; path = "Sources/SwiftProtobuf/Google_Protobuf_Any+Registry.swift"; sourceTree = "<group>"; };
 		FFB6AB849A33A876784DD7B372D19D37 /* BinaryDecodingOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BinaryDecodingOptions.swift; path = Sources/SwiftProtobuf/BinaryDecodingOptions.swift; sourceTree = "<group>"; };
 		FFDD55C2E1BF7001ACB40B6ADEBE114B /* Pods-SmappSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SmappSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -363,20 +365,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08DFF34D59E95B1211E795BFB333A4E2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				2AFB54304BC6649D3632FA86C9640EE7 /* SmappSDK.modulemap */,
-				EAF1B8C0D92C6495AF6091916E4A58D4 /* SmappSDK.xcconfig */,
-				949741F80B201760F837A765E09AE9BB /* SmappSDK-dummy.m */,
-				26DD0B602C57BA45E3101E9FA8A80C5F /* SmappSDK-Info.plist */,
-				9B44D6C49F9A79CFB204A7067A2C4C07 /* SmappSDK-prefix.pch */,
-				71FDBDE239D3C4BE0A1CD5E4F8311B99 /* SmappSDK-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/SmappSDK";
-			sourceTree = "<group>";
-		};
 		09C873D95FF69DEB7BF952D92D2A0DC5 /* Pods-SmappSDK_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,16 +380,6 @@
 			);
 			name = "Pods-SmappSDK_Tests";
 			path = "Target Support Files/Pods-SmappSDK_Tests";
-			sourceTree = "<group>";
-		};
-		1B2E004785908633FC3F1BE194A14C76 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				09863522E16427FA7FDAAC7EB8A256A6 /* LICENSE */,
-				C6EB95A1AC6D88079F9DEC0040077CCC /* README.md */,
-				B735ABD7D9DB36A13F9386996C6E6E05 /* SmappSDK.podspec */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		1FD5DAE0A54C644DFB59250CE6E35EF4 /* SwiftSupport */ = {
@@ -494,7 +472,39 @@
 				4514CBDB7CFC306B77AB353266477F78 /* ZigZag.swift */,
 				BD75623285634D8A91A8F85E4B4B8FA6 /* Support Files */,
 			);
+			name = SwiftProtobuf;
 			path = SwiftProtobuf;
+			sourceTree = "<group>";
+		};
+		37914171A5AAAD0E814D268EA169549B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				125EE9B98E52BF947B4E8E4C27B55333 /* SmappSDK.modulemap */,
+				BCC77EF34448E7D0DD52C4E6301469BA /* SmappSDK.xcconfig */,
+				20039D7FC48262C20F3C9465D16D1E55 /* SmappSDK-dummy.m */,
+				0A5CDA22C842F22D7625B234A1D71927 /* SmappSDK-Info.plist */,
+				6F5AB8CF6ABB5B8A194A1C8D4D9B37CC /* SmappSDK-prefix.pch */,
+				9C231970661CE4C343C6FDDFF2C5A958 /* SmappSDK-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SmappSDK";
+			sourceTree = "<group>";
+		};
+		3C9B68B1BB49924EBB90EBCCB76D75BA /* SmappSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B9157C3FDFBA95B2756B5B234C6DF7DF /* CGUtils.swift */,
+				3318EF402C92CD883EA70621B9E74182 /* SmappScrollView.swift */,
+				436BFC88F4470A20422A2A989DC9CE4C /* SmappView.swift */,
+				5FA3772F5C6330846A131EB1AA1C5F37 /* TileInterpreter.swift */,
+				FA2D22F031519BC93CD0548A9A0CB798 /* TileProvider.swift */,
+				CA13599B8994A1655A9B1B27B24C03B3 /* VectorTileUtils.swift */,
+				44A6662A8220A6575E1D4D17EDCD4D54 /* Pod */,
+				54B0E5924B698E7F10761CAF5B3F3C15 /* Protobuf */,
+				37914171A5AAAD0E814D268EA169549B /* Support Files */,
+			);
+			name = SmappSDK;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		3D753FF654E9C7FE346CB8489BD0FB5C /* Pods-SmappSDK_Example */ = {
@@ -514,20 +524,31 @@
 			path = "Target Support Files/Pods-SmappSDK_Example";
 			sourceTree = "<group>";
 		};
-		4EF46E7281D3212FF2A163A1478E8AF4 /* SmappSDK */ = {
+		44A6662A8220A6575E1D4D17EDCD4D54 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				C425ED2021C17B8500B31D56 /* TileInterpreter.swift */,
-				C425ED1A21C1771E00B31D56 /* SmappView.swift */,
-				6767BA360E079FD5665DE613B97C4D2E /* TileProvider.swift */,
-				1B2E004785908633FC3F1BE194A14C76 /* Pod */,
-				637F649C8A7EC9FDE5FA38C84DEBF751 /* Protobuf */,
-				08DFF34D59E95B1211E795BFB333A4E2 /* Support Files */,
-				C425ED2221C197DB00B31D56 /* VectorTileUtils.swift */,
-				C425ED2421C2650300B31D56 /* CGUtils.swift */,
+				C981D36F52AF99A60F9A20DA58BC198F /* LICENSE */,
+				47DF1AF2CF99997EB209FD0692B628D4 /* README.md */,
+				3DB2D5238CF8BCD57A1758176AD9574E /* SmappSDK.podspec */,
 			);
-			name = SmappSDK;
-			path = ../..;
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		47933158389663D0D9E56E34530DC689 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C9B68B1BB49924EBB90EBCCB76D75BA /* SmappSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		54B0E5924B698E7F10761CAF5B3F3C15 /* Protobuf */ = {
+			isa = PBXGroup;
+			children = (
+				AD30E57A78C8591BF29BC1D4DC01B28C /* vector_tile.pb.swift */,
+			);
+			name = Protobuf;
+			path = SmappSDK/Classes/Protobuf;
 			sourceTree = "<group>";
 		};
 		551E4E594B1B46B9B1C197CF80800BC5 /* Frameworks */ = {
@@ -549,15 +570,6 @@
 				ED4AED6DBC97A3CE84DE50136EB13559 /* SwiftProtobuf.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		637F649C8A7EC9FDE5FA38C84DEBF751 /* Protobuf */ = {
-			isa = PBXGroup;
-			children = (
-				B9BA7A25D1D83775B291957E911A2F1E /* vector_tile.pb.swift */,
-			);
-			name = Protobuf;
-			path = SmappSDK/Classes/Protobuf;
 			sourceTree = "<group>";
 		};
 		724947E5EA4A2AAD2DA6C5A5B47D5273 /* Pods */ = {
@@ -587,7 +599,7 @@
 			isa = PBXGroup;
 			children = (
 				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
-				8FCC6DC88393801888D8D18B3999311B /* Development Pods */,
+				47933158389663D0D9E56E34530DC689 /* Development Pods */,
 				551E4E594B1B46B9B1C197CF80800BC5 /* Frameworks */,
 				724947E5EA4A2AAD2DA6C5A5B47D5273 /* Pods */,
 				5B92DCB303EC2F9CEB1D2905C2099C5F /* Products */,
@@ -616,14 +628,6 @@
 			name = Core;
 			sourceTree = "<group>";
 		};
-		8FCC6DC88393801888D8D18B3999311B /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				4EF46E7281D3212FF2A163A1478E8AF4 /* SmappSDK */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 		A20F11AEE5E1A95E658872E4F3518314 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +644,7 @@
 				782BA9F31803E3425FB91F9E80716BD4 /* Support Files */,
 				1FD5DAE0A54C644DFB59250CE6E35EF4 /* SwiftSupport */,
 			);
+			name = FBSnapshotTestCase;
 			path = FBSnapshotTestCase;
 			sourceTree = "<group>";
 		};
@@ -726,7 +731,7 @@
 			buildConfigurationList = EEA3F90AC9AAA3B071D2CF68DB6C7C3C /* Build configuration list for PBXNativeTarget "SmappSDK" */;
 			buildPhases = (
 				0B3EE8AE85CF3432886EFA084056458A /* Headers */,
-				310BD982749FE501C182C8CF5B3FBCF8 /* Sources */,
+				1604A7C1EB5573C7A468DE985E0289F9 /* Sources */,
 				F1B27003F9A66B96C34E9D06A086DCC2 /* Frameworks */,
 				DB056D1AF080956C99277EE370B7DCB4 /* Resources */,
 			);
@@ -885,17 +890,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		310BD982749FE501C182C8CF5B3FBCF8 /* Sources */ = {
+		1604A7C1EB5573C7A468DE985E0289F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0169AF5A2D98E085B2BDF8CD3BF40A7C /* SmappSDK-dummy.m in Sources */,
-				C425ED2521C2650300B31D56 /* CGUtils.swift in Sources */,
-				C425ED2121C17B8500B31D56 /* TileInterpreter.swift in Sources */,
-				A54E3E0673F17ED400F6219DDAD46F6D /* TileProvider.swift in Sources */,
-				C425ED1C21C1782400B31D56 /* SmappView.swift in Sources */,
-				C425ED2321C197DB00B31D56 /* VectorTileUtils.swift in Sources */,
-				A8F41C30A4E6AFE80AC7FF1A6329A25E /* vector_tile.pb.swift in Sources */,
+				4FF8CD4230874063C8F1E6401EC0CEFF /* CGUtils.swift in Sources */,
+				6670AC10A2913D3A495A6B1C9571F820 /* SmappScrollView.swift in Sources */,
+				C75FC6E7782B1EACAA7B4259F52F816C /* SmappSDK-dummy.m in Sources */,
+				1F4B6FA88D660D0523AB1C7CA7CD76E0 /* SmappView.swift in Sources */,
+				7591F461099D370C54CB9EA6AB7037F7 /* TileInterpreter.swift in Sources */,
+				11E3C583D09F235FE56E7A2522BDC869 /* TileProvider.swift in Sources */,
+				1554DB892150D0AD0531B26D7217D886 /* vector_tile.pb.swift in Sources */,
+				1AECFBE76C5D9CF361ED001B7D358773 /* VectorTileUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1211,7 +1217,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_COMPILATION_MODE = singlefile;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
@@ -1302,7 +1307,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};
@@ -1340,9 +1346,9 @@
 			};
 			name = Release;
 		};
-		B0FC3B828A984943451E7F0A51933429 /* Release */ = {
+		965A6969769FD397E19C6E91E7A3CBCD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAF1B8C0D92C6495AF6091916E4A58D4 /* SmappSDK.xcconfig */;
+			baseConfigurationReference = BCC77EF34448E7D0DD52C4E6301469BA /* SmappSDK.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1356,7 +1362,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SmappSDK/SmappSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SmappSDK/SmappSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SmappSDK/SmappSDK.modulemap";
 				PRODUCT_MODULE_NAME = SmappSDK;
@@ -1366,11 +1372,10 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		C31D1D9E20CD47004299102DA1B20033 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1437,9 +1442,9 @@
 			};
 			name = Release;
 		};
-		DD34F81129EB2F6F94D1681965EABA0D /* Debug */ = {
+		D20B770263EC542B1D1C8D34EDF1B153 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EAF1B8C0D92C6495AF6091916E4A58D4 /* SmappSDK.xcconfig */;
+			baseConfigurationReference = BCC77EF34448E7D0DD52C4E6301469BA /* SmappSDK.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1453,7 +1458,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SmappSDK/SmappSDK-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SmappSDK/SmappSDK-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/SmappSDK/SmappSDK.modulemap";
 				PRODUCT_MODULE_NAME = SmappSDK;
@@ -1463,10 +1468,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		F403858987694750C4382F9B1A4C4540 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1550,8 +1556,8 @@
 		EEA3F90AC9AAA3B071D2CF68DB6C7C3C /* Build configuration list for PBXNativeTarget "SmappSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD34F81129EB2F6F94D1681965EABA0D /* Debug */,
-				B0FC3B828A984943451E7F0A51933429 /* Release */,
+				965A6969769FD397E19C6E91E7A3CBCD /* Debug */,
+				D20B770263EC542B1D1C8D34EDF1B153 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
