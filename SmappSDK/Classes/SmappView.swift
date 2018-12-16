@@ -9,9 +9,6 @@ import UIKit
 
 public class SmappView: UIView {
 
-    var tile: VectorTile_Tile!
-    
-    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -27,9 +24,9 @@ public class SmappView: UIView {
     }
     
     private func setupView() {
-        tile = TileProvider().image(zoom: 13, x: 5266, y: 3222)
+        
         backgroundColor = UIColor.gray
-        tileLayer.tileSize = CGSize(width: frame.width, height: frame.width)
+        tileLayer.tileSize = CGSize(width: 600, height: 600)
         
     }
     
@@ -41,14 +38,17 @@ public class SmappView: UIView {
     // An empty implementation adversely affects performance during animation.
     override public func draw(_ rect: CGRect) {
         
-        let _ = TileProvider().image(zoom: 13, x: 5266, y: 3222)
-        
+        print(rect)
         let contex = UIGraphicsGetCurrentContext()
+        guard let tile = TileProvider().image(zoom: 13, x: 5266, y: 3222) else {
+            return
+        }
         for layer in tile.layers {
             drawLayer(contex: contex!, rect: rect, layer: layer)
 
         }
     }
+    
 private func drawLayer(contex: CGContext, rect: CGRect, layer: VectorTile_Tile.Layer) {
     let interpreter = TileInterpreter(vectorTileLayer: layer, rect: rect)
     var feature: GeometyTypes?
@@ -57,47 +57,45 @@ private func drawLayer(contex: CGContext, rect: CGRect, layer: VectorTile_Tile.L
         guard feature != nil else {
             break
         }
-        drawFeature(contex: contex, rect: rect, interpreter: interpreter)
+        drawFeature(contex: contex, feature: feature!, rect: rect, interpreter: interpreter)
     } while (feature != nil)
-    
-    
-
-    //            bezierPath.lineWidth = 1
-    //            bezierPath.stroke()
     
 }
 
 
     
-private func drawFeature(contex: CGContext,rect: CGRect,interpreter: TileInterpreter) {
+    private func drawFeature(contex: CGContext,feature: GeometyTypes,rect: CGRect,interpreter: TileInterpreter) {
     var command: GeometryCommand?
     var commandPoint: CGPoint = .zero
     let bezier = UIBezierPath()
     UIColor.white.setStroke()
+    UIColor.red.setFill()
     bezier.lineWidth = 1
     repeat {
-        //contex.beginPath()
-        //contex.setStrokeColor(UIColor.white.cgColor)
-        //contex.setLineWidth(1)
         command = interpreter.nextCommand()
         switch command ?? .unknown {
         case .moveTo(point: let point):
             commandPoint += point
-            //contex.move(to: commandPoint)
             bezier.move(to: commandPoint + rect.origin)
         case .lineTo(point: let point):
             commandPoint += point
-            //contex.addLine(to: commandPoint)
             bezier.addLine(to: commandPoint + rect.origin)
         case .closePath:
-            //contex.closePath()
             bezier.close()
         case .unknown:
             ()
         }
+        switch feature {
+        case .point:
+            break
+        case .lineString:
+            bezier.stroke()
+        case .polygon:
+            bezier.fill()
+        case .unknown:
+            break
+        }
         
-        //contex.strokePath()
-        bezier.stroke()
     } while (command != nil)
     
     }
