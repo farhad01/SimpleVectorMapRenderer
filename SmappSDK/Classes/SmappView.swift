@@ -9,6 +9,8 @@ import UIKit
 
 public class SmappView: UIView {
 
+    let sideLength: CGFloat = 400
+    
     public override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -26,7 +28,7 @@ public class SmappView: UIView {
     private func setupView() {
         
         backgroundColor = UIColor.gray
-        tileLayer.tileSize = CGSize(width: 600, height: 600)
+        tileLayer.tileSize = CGSize(width: sideLength, height: sideLength)
         
     }
     
@@ -37,17 +39,33 @@ public class SmappView: UIView {
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override public func draw(_ rect: CGRect) {
+        let firstColumn = Int(rect.minX / sideLength)
+        let lastColumn = Int(rect.maxX / sideLength)
+        let firstRow = Int(rect.minY / sideLength)
+        let lastRow = Int(rect.maxY / sideLength)
         
-        print(rect)
-        let contex = UIGraphicsGetCurrentContext()
-        guard let tile = TileProvider().image(zoom: 13, x: 5266, y: 3222) else {
-            return
-        }
-        for layer in tile.layers {
-            drawLayer(contex: contex!, rect: rect, layer: layer)
-
+        print("\(firstColumn) \(firstRow) \(lastColumn) \(lastRow))")
+        
+        for row in firstRow...lastRow {
+            for column in firstColumn...lastColumn {
+                guard let tile = TileProvider().image(zoom: 13, x:UInt64(5266 + column) , y: UInt64(3222 + row)) else {
+                    return
+                }
+                let x = sideLength * CGFloat(column)
+                let y = sideLength * CGFloat(row)
+                let point = CGPoint(x: x, y: y)
+                let size = CGSize(width: sideLength, height: sideLength)
+                var tileRect = CGRect(origin: point, size: size)
+                tileRect = bounds.intersection(tileRect)
+                let contex = UIGraphicsGetCurrentContext()
+                for layer in tile.layers {
+                    drawLayer(contex: contex!, rect: tileRect, layer: layer)
+                    
+                }
+            }
         }
     }
+    
     
 private func drawLayer(contex: CGContext, rect: CGRect, layer: VectorTile_Tile.Layer) {
     let interpreter = TileInterpreter(vectorTileLayer: layer, rect: rect)
