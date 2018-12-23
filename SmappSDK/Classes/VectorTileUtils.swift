@@ -22,4 +22,8 @@ class VectorTileUtils {
         return Int((parameterInteger >> 1) ^ (-(parameterInteger & 1)))
     }
     
+    static func tileLenght(zoom: Int) -> CGFloat {
+        return Constants.mapWidth / pow(2, CGFloat(zoom)) * 200
+    }
+    
 }

@@ -49,6 +49,9 @@ class TileInterpreter {
             let geomInt = getGeomUInt32(index: commandIndex!)
             thisCommandId = VectorTileUtils.commandId(commandInteger: geomInt)
             thisCommandCount = VectorTileUtils.commandCount(commandInteger: geomInt)
+            if getGeomCount() <= commandIndex + thisCommandCount * 2 {
+                thisCommandCount = (getGeomCount() - commandIndex - 1) / 2
+            }
             commandParamIndex = 0
         }
     }
@@ -82,6 +85,7 @@ class TileInterpreter {
                 }
             }
         }
+        
         switch thisCommandId {
         case 1:
             //moveTo
