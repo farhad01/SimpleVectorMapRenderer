@@ -38,9 +38,11 @@ public class SmappScrollView: UIScrollView {
         smappView.widthAnchor.constraint(equalToConstant: Constants.mapWidth).isActive = true
         smappView.heightAnchor.constraint(equalToConstant: Constants.mapHeight).isActive = true
 
+        smappView.sideLength = 600
+        
         delegate = self
         
-        self.minimumZoomScale = 0.1
+        self.minimumZoomScale = 1
         self.maximumZoomScale = 14
 
         zoomScale = 0

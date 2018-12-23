@@ -102,7 +102,6 @@
 		C22BC94182892BBB5258D8D0B46B74BA /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA98704FE0FA3F55CD2C0208A0FA7F5 /* Decoder.swift */; };
 		C2952BFFBD6C6AE5B7FF771529EAF380 /* Pods-SmappSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BA8E5D1ADDA7FD8898F5830923F04BC /* Pods-SmappSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C2A7A3F336DC5020C3656DD6E42E5DF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1485AFB720F832BD4CE44BA03B93A5F4 /* Foundation.framework */; };
-		C41D2FA721CFC1BB0095F33D /* SmappTiledLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D2FA621CFC1BB0095F33D /* SmappTiledLayer.swift */; };
 		C41D2FA921CFC38C0095F33D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41D2FA821CFC38C0095F33D /* Constants.swift */; };
 		C75FC6E7782B1EACAA7B4259F52F816C /* SmappSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 20039D7FC48262C20F3C9465D16D1E55 /* SmappSDK-dummy.m */; };
 		C81B2B384D8D728C113067FDB34C3F93 /* JSONEncodingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2B6C44F387F1FD6A3F3E673C056208 /* JSONEncodingOptions.swift */; };
@@ -283,7 +282,6 @@
 		BCC77EF34448E7D0DD52C4E6301469BA /* SmappSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SmappSDK.xcconfig; sourceTree = "<group>"; };
 		BDEF0298BA70773C9DB45B492DA86132 /* struct.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = struct.pb.swift; path = Sources/SwiftProtobuf/struct.pb.swift; sourceTree = "<group>"; };
 		BE30A7996056EC3BD1E5524E40470ACB /* source_context.pb.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = source_context.pb.swift; path = Sources/SwiftProtobuf/source_context.pb.swift; sourceTree = "<group>"; };
-		C41D2FA621CFC1BB0095F33D /* SmappTiledLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SmappTiledLayer.swift; path = SmappSDK/Classes/SmappTiledLayer.swift; sourceTree = "<group>"; };
 		C41D2FA821CFC38C0095F33D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = SmappSDK/Classes/Constants.swift; sourceTree = "<group>"; };
 		C439D011B139717C6A5935B0B445E347 /* UIApplication+StrictKeyWindow.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIApplication+StrictKeyWindow.h"; path = "FBSnapshotTestCase/Categories/UIApplication+StrictKeyWindow.h"; sourceTree = "<group>"; };
 		C4D7C2B32DAA677420F74F942A7F359B /* Pods-SmappSDK_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SmappSDK_Tests-Info.plist"; sourceTree = "<group>"; };
@@ -498,7 +496,6 @@
 			children = (
 				B9157C3FDFBA95B2756B5B234C6DF7DF /* CGUtils.swift */,
 				3318EF402C92CD883EA70621B9E74182 /* SmappScrollView.swift */,
-				C41D2FA621CFC1BB0095F33D /* SmappTiledLayer.swift */,
 				436BFC88F4470A20422A2A989DC9CE4C /* SmappView.swift */,
 				5FA3772F5C6330846A131EB1AA1C5F37 /* TileInterpreter.swift */,
 				FA2D22F031519BC93CD0548A9A0CB798 /* TileProvider.swift */,
@@ -899,7 +896,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF8CD4230874063C8F1E6401EC0CEFF /* CGUtils.swift in Sources */,
-				C41D2FA721CFC1BB0095F33D /* SmappTiledLayer.swift in Sources */,
 				6670AC10A2913D3A495A6B1C9571F820 /* SmappScrollView.swift in Sources */,
 				C75FC6E7782B1EACAA7B4259F52F816C /* SmappSDK-dummy.m in Sources */,
 				1F4B6FA88D660D0523AB1C7CA7CD76E0 /* SmappView.swift in Sources */,

@@ -7,7 +7,8 @@
 
 class SmappView: UIView {
     
-    var layers: [SmappTiledLayer] = []
+    var zoom: Int = 0
+    
     
     var currnetLayer: Int = 0
     override init(frame: CGRect) {
@@ -24,25 +25,127 @@ class SmappView: UIView {
 
     
     func setupViews() {
-        for zoom in (Constants.minZoom ... Constants.maxZoom) {
-            let layer = SmappTiledLayer(frame: frame)
-            layer.sideLength = VectorTileUtils.tileLenght(zoom: zoom)
-            layer.zoom = zoom
-            //layer.frame = frame
-            layers.append(layer)
-        }
-        setZoomLevel(zoom: 0)
+        tileLayer.levelsOfDetailBias = 2
     }
     
-    override func layoutSubviews() {
-        subviews.first?.frame = frame
-    }
-
     func setZoomLevel(zoom: Int) {
-        layers[currnetLayer].removeFromSuperview()
-        addSubview(layers[zoom])
-        layers[zoom].frame = frame
-        layers[zoom].bounds = bounds
-        currnetLayer = zoom
+        tileLayer.levelsOfDetail = zoom
+        self.zoom = zoom
     }
+    
+    var tileLayer: CATiledLayer {
+        return layer as! CATiledLayer
+    }
+    
+    var sideLength: CGFloat = 0 {
+        didSet {
+            tileLayer.tileSize = CGSize(width: sideLength, height: sideLength)
+        }
+    }
+    override public class var layerClass: AnyClass {
+        return CATiledLayer.self
+    }
+    
+    public override func draw(_ rect: CGRect) {
+        let firstColumn = Int(rect.minX / sideLength)
+        let lastColumn = Int(rect.maxX / sideLength)
+        let firstRow = Int(rect.minY / sideLength)
+        let lastRow = Int(rect.maxY / sideLength)
+        
+        
+        for row in firstRow...lastRow {
+            for column in firstColumn...lastColumn {
+                guard let tile = TileProvider().image(zoom: UInt64(zoom), x:UInt64(column) , y: UInt64(row)) else {
+                    return
+                }
+                let x = sideLength * CGFloat(column)
+                let y = sideLength * CGFloat(row)
+                let point = CGPoint(x: x, y: y)
+                let size = CGSize(width: sideLength, height: sideLength)
+                var tileRect = CGRect(origin: point, size: size)
+                tileRect = bounds.intersection(tileRect)
+                let contex = UIGraphicsGetCurrentContext()
+                for layer in tile.layers {
+                    drawLayer(contex: contex!, rect: tileRect, layer: layer)
+                    
+                }
+            }
+        }
+        //ssuper.draw(rect)
+    }
+    
+    
+    private func drawLayer(contex: CGContext, rect: CGRect, layer: VectorTile_Tile.Layer) {
+        let interpreter = TileInterpreter(vectorTileLayer: layer, rect: rect)
+        var feature: GeometyTypes?
+        repeat {
+            feature = interpreter.nextFeature()
+            guard feature != nil else {
+                break
+            }
+            drawFeature(contex: contex, feature: feature!, rect: rect, interpreter: interpreter)
+        } while (feature != nil)
+        
+    }
+    
+    
+    
+    private func drawFeature(contex: CGContext,feature: GeometyTypes,rect: CGRect,interpreter: TileInterpreter) {
+        var command: GeometryCommand?
+        var commandPoint: CGPoint = .zero
+        let bezier = UIBezierPath()
+        UIColor.white.setStroke()
+        UIColor.red.setFill()
+        
+        bezier.lineWidth = 1
+        repeat {
+            command = interpreter.nextCommand()
+            switch command ?? .unknown {
+            case .moveTo(point: let point):
+                commandPoint += point
+                bezier.move(to: commandPoint + rect.origin)
+            case .lineTo(point: let point):
+                commandPoint += point
+                bezier.addLine(to: commandPoint + rect.origin)
+            case .closePath:
+                bezier.close()
+            case .unknown:
+                ()
+            }
+            switch feature {
+            case .point:
+                break
+            case .lineString:
+                bezier.stroke()
+            case .polygon:
+                bezier.fill()
+            case .unknown:
+                break
+            }
+            
+        } while (command != nil)
+        
+    }
+    private func drawPoligon(contex: CGContext, interpreter: TileInterpreter) {
+        
+    }
+    
+    private func moveTo() {
+        
+    }
+    
+    private func lineTo() {
+        
+    }
+    
+    private func closePath() {
+        
+    }
+    
+    //    override public class func fadeDuration() -> CFTimeInterval {
+    //        return 0.0
+    //    }
+    //    override var tileSize: CGSize {
+    //        return
+    //    }
 }
