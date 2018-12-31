@@ -25,11 +25,12 @@ class SmappView: UIView {
 
     
     func setupViews() {
-        tileLayer.levelsOfDetailBias = 2
+        tileLayer.levelsOfDetailBias = Int(Constants.zoomOutLevels + Constants.zoomInLevels + 1)
+        tileLayer.levelsOfDetail = Int(Constants.zoomInLevels)
     }
     
     func setZoomLevel(zoom: Int) {
-        tileLayer.levelsOfDetail = zoom
+        
         self.zoom = zoom
     }
     
@@ -47,32 +48,41 @@ class SmappView: UIView {
     }
     
     public override func draw(_ rect: CGRect) {
-        let firstColumn = Int(rect.minX / sideLength)
-        let lastColumn = Int(rect.maxX / sideLength)
-        let firstRow = Int(rect.minY / sideLength)
-        let lastRow = Int(rect.maxY / sideLength)
+        let context = UIGraphicsGetCurrentContext()!
+        
+        let tileScale = context.ctm.a
+        
+        let scaleRect = rect.applying(CGAffineTransform(scaleX: tileScale, y: tileScale))
+        
+        let row = round(scaleRect.minX / tileLayer.tileSize.width)
+        let col = round(scaleRect.minY / tileLayer.tileSize.width)
+        
+        let zoom = log2(tileScale)
+        
+//        let bez = UIBezierPath(rect: rect.insetBy(dx: 1, dy: 1))
+//        UIColor.blue.setFill()
+//        UIColor.red.setStroke()
+//        bez.lineWidth = 4
+//
+//        bez.stroke()
+//        bez.fill()
+        
+
+        
+//        let attr = NSAttributedString(string: "\(row)  \(col)  \(zoom)")
+//        attr.draw(in: rect.insetBy(dx: 3, dy: 3))
+
         
         
-        for row in firstRow...lastRow {
-            for column in firstColumn...lastColumn {
-                guard let tile = TileProvider().image(zoom: UInt64(zoom), x:UInt64(column) , y: UInt64(row)) else {
+        guard let tile = TileProvider().image(zoom: UInt64(zoom), x:UInt64(row) , y: UInt64(col)) else {
                     return
-                }
-                let x = sideLength * CGFloat(column)
-                let y = sideLength * CGFloat(row)
-                let point = CGPoint(x: x, y: y)
-                let size = CGSize(width: sideLength, height: sideLength)
-                var tileRect = CGRect(origin: point, size: size)
-                tileRect = bounds.intersection(tileRect)
-                let contex = UIGraphicsGetCurrentContext()
-                for layer in tile.layers {
-                    drawLayer(contex: contex!, rect: tileRect, layer: layer)
-                    
-                }
-            }
         }
-        //ssuper.draw(rect)
+        for layer in tile.layers {
+            drawLayer(contex: context, rect: rect, layer: layer)
+        }
+        
     }
+    
     
     
     private func drawLayer(contex: CGContext, rect: CGRect, layer: VectorTile_Tile.Layer) {
@@ -97,7 +107,7 @@ class SmappView: UIView {
         UIColor.white.setStroke()
         UIColor.red.setFill()
         
-        bezier.lineWidth = 1
+        bezier.lineWidth = 1 / UIGraphicsGetCurrentContext()!.ctm.a
         repeat {
             command = interpreter.nextCommand()
             switch command ?? .unknown {

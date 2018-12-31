@@ -12,5 +12,7 @@ struct Constants {
     static let maxZoom = 14
     static let mapWidth:CGFloat = pow(2, 14)
     static let mapHeight:CGFloat = pow(2, 14)
+    static let zoomOutLevels = CGFloat(1)
+    static let zoomInLevels = CGFloat(14)
     
 }
