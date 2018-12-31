@@ -46,7 +46,7 @@ class TileInterpreter {
             guard commandIndex != nil else {
                 return
             }
-            let geomInt = getGeomUInt32(index: commandIndex!)
+            let geomInt = getGeomUInt32(index: commandIndex!)!
             thisCommandId = VectorTileUtils.commandId(commandInteger: geomInt)
             thisCommandCount = VectorTileUtils.commandCount(commandInteger: geomInt)
             if getGeomCount() <= commandIndex + thisCommandCount * 2 {
@@ -89,12 +89,16 @@ class TileInterpreter {
         switch thisCommandId {
         case 1:
             //moveTo
-            let value = getParamersFromGeom(index: paramIndex)
+            guard let value = getParamersFromGeom(index: paramIndex) else {
+                return nil
+            }
             return .moveTo(point: value)
             
         case 2:
             //lineTo
-            let value = getParamersFromGeom(index: paramIndex)
+            guard let value = getParamersFromGeom(index: paramIndex) else {
+                return nil
+            }
             return .lineTo(point: value)
         case 7:
             return .closePath
@@ -112,17 +116,25 @@ class TileInterpreter {
         return GeometyTypes(geomType: vectorTileLayer.features[featureIndex].type)
     }
     
-    private func getParamersFromGeom(index: Int) -> CGPoint {
-        let x = getValueFromGeom(index: index) * rect.width
-        let y = getValueFromGeom(index: index + 1) * rect.height
-        return CGPoint(x: x,y: y)
+    private func getParamersFromGeom(index: Int) -> CGPoint? {
+        guard let x = getValueFromGeom(index: index) ,
+            let y = getValueFromGeom(index: index + 1) else {
+                return nil
+        }
+        return CGPoint(x: x * rect.width,y: y * rect.height)
     }
     
-    private func getValueFromGeom(index: Int) -> CGFloat {
-        return CGFloat(VectorTileUtils.parameterValue(parameterInteger: getGeomUInt32(index: index))) / CGFloat(vectorTileLayer.extent)
+    private func getValueFromGeom(index: Int) -> CGFloat? {
+        guard let uint = getGeomUInt32(index: index) else {
+            return nil
+        }
+        return CGFloat(VectorTileUtils.parameterValue(parameterInteger: uint)) / CGFloat(vectorTileLayer.extent)
     }
     
-    private func getGeomUInt32(index: Int) -> UInt32 {
+    private func getGeomUInt32(index: Int) -> UInt32? {
+        if index >= getGeomCount() {
+            return nil
+        }
         return vectorTileLayer.features[featureIndex].geometry[index]
     }
     private func getGeomCount() -> Int {
