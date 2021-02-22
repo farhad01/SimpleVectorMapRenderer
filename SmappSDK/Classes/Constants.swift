@@ -10,9 +10,8 @@ import Foundation
 struct Constants {
     static let minZoom = 0
     static let maxZoom = 14
-    static let mapWidth:CGFloat = pow(2, 14)
-    static let mapHeight:CGFloat = pow(2, 14)
-    static let zoomOutLevels = CGFloat(1)
-    static let zoomInLevels = CGFloat(14)
+    static let sideLength:CGFloat = 1024
+    static let zoomOutLevels = CGFloat(0)
+    static let zoomInLevels = CGFloat(13)
     
 }

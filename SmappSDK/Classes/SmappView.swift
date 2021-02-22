@@ -4,11 +4,13 @@
 //
 //  Created by farhad jebelli on 12/12/18.
 //
-
+import UIKit
 class SmappView: UIView {
     
-    var zoom: Int = 0
-    
+    //var zoom: Int = 0
+    var scrollview: SmappScrollView {
+        superview as! SmappScrollView
+    }
     
     var currnetLayer: Int = 0
     override init(frame: CGRect) {
@@ -22,16 +24,15 @@ class SmappView: UIView {
         setupViews()
     }
     
-
-    
     func setupViews() {
-        tileLayer.levelsOfDetailBias = Int(Constants.zoomOutLevels + Constants.zoomInLevels + 1)
+        tileLayer.levelsOfDetailBias = Int(Constants.zoomInLevels)
         tileLayer.levelsOfDetail = Int(Constants.zoomInLevels)
+        tileLayer.contentsScale = 3
     }
     
     func setZoomLevel(zoom: Int) {
         
-        self.zoom = zoom
+        //self.zoom = zoom
     }
     
     var tileLayer: CATiledLayer {
@@ -74,13 +75,25 @@ class SmappView: UIView {
 
         
         
-        guard let tile = TileProvider().image(zoom: UInt64(zoom), x:UInt64(row) , y: UInt64(col)) else {
+        guard let tile = TileProvider().image(zoom: Int64(zoom), x: Int64(row) , y: Int64(col)) else {
                     return
         }
         for layer in tile.layers {
             drawLayer(contex: context, rect: rect, layer: layer)
         }
-        
+//        let bezier = UIBezierPath(rect: rect)
+//        var attr: [NSAttributedString.Key: Any] = [.font: UIFont.systemFont(ofSize: 1 / tileScale)]
+//        if (row + col).truncatingRemainder(dividingBy: 2) == 0 {
+//            UIColor.black.setFill()
+//            attr[NSAttributedString.Key.foregroundColor] = UIColor.white
+//
+//        } else {
+//            UIColor.white.setFill()
+//            attr[NSAttributedString.Key.foregroundColor] = UIColor.black
+//        }
+//        bezier.fill()
+//
+//        "[\(row), \(col)]".draw(at: rect.origin, withAttributes: attr)
     }
     
     
@@ -128,7 +141,7 @@ class SmappView: UIView {
             case .lineString:
                 bezier.stroke()
             case .polygon:
-                bezier.fill()
+                break//bezier.fill()
             case .unknown:
                 break
             }

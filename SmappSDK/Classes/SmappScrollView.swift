@@ -25,6 +25,12 @@ public class SmappScrollView: UIScrollView {
         setupView()
     }
     
+    public override var bounds: CGRect {
+        didSet {
+            print(123)
+        }
+    }
+    
     private func setupView() {
         
         addSubview(smappView)
@@ -35,19 +41,23 @@ public class SmappScrollView: UIScrollView {
         smappView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
         smappView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
         
-        smappView.widthAnchor.constraint(equalToConstant: Constants.mapWidth).isActive = true
-        smappView.heightAnchor.constraint(equalToConstant: Constants.mapHeight).isActive = true
+        smappView.widthAnchor.constraint(equalToConstant: Constants.sideLength).isActive = true
+        smappView.heightAnchor.constraint(equalToConstant: Constants.sideLength).isActive = true
 
         smappView.sideLength = 1024
         
         delegate = self
         
-        self.minimumZoomScale = pow(2, -Constants.zoomOutLevels)
+        self.minimumZoomScale = pow(2, Constants.zoomOutLevels)
         self.maximumZoomScale = pow(2, Constants.zoomInLevels)
 
-        zoomScale = 0.1
+        zoomScale = 1
+        bounds = CGRect(x: 0, y: 0, width: 1024, height: 1024)
     }
-    
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        
+    }
 }
 
 extension SmappScrollView: UIScrollViewDelegate {
@@ -58,6 +68,7 @@ extension SmappScrollView: UIScrollViewDelegate {
     
     public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let zoom = floor(scrollView.zoomScale)
+        smappView.tileLayer.setNeedsDisplay()
         guard Int(zoom) != lastZoom, (1...14).contains(zoom) else {
             return
         }

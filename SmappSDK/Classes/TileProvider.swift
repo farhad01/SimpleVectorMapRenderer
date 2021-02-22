@@ -3,20 +3,20 @@ import Foundation
 import UIKit
 class TileProvider {
     
-    func image(zoom: UInt64, x: UInt64, y: UInt64) -> VectorTile_Tile? {
+    func image(zoom: Int64, x: Int64, y: Int64) -> VectorTile_Tile? {
         
-        let string = "https://dev-tileserver.apps.public.teh-1.snappcloud.io/data/v3/\(zoom)/\(x)/\(y).pbf"
+        let string = "https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/\(zoom)/\(x)/\(y).mvt?access_token=pk.eyJ1IjoiamViZWxsaS1mYXJoYWQiLCJhIjoiY2pwaWxmaWZoMDIxdDNwcHIzMXd5Y3dtMyJ9.QaTHPUcSJixLtncGsHxjLQ"
         guard let url = URL(string: string) else {
             return nil
         }
-    
-        guard let data = try? Data(contentsOf: url) else {
+        do {
+            let data = try Data(contentsOf: url)
+            let tile = try? VectorTile_Tile(serializedData: data)
+            return tile
+        } catch {
+            print(error)
             return nil
         }
-        let tile = try? VectorTile_Tile(serializedData: data)
-
-        
-        return tile
         
     }
     
